@@ -1,0 +1,25 @@
+[package]
+authors = ["In-line <cplusplus256@gmail.com>"]
+name = "game_2048"
+version = "0.1.0"
+[[bin]]
+name = "game_2048"
+
+[dependencies]
+clippy = "*"
+piston = "0.33.0"
+piston2d-graphics = "0.21.1"
+piston2d-opengl_graphics = "0.46.0"
+pistoncore-glutin_window = "0.39.0"
+
+rand = "0.3.7"
+rustc-serialize = "0.3"
+
+[profile.release]
+opt-level = 3
+debug-assertions = true
+lto = true
+codegen-units = 4
+
+[profile.dev]
+codegen-units = 4
